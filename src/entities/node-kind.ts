@@ -1,6 +1,15 @@
 export enum NodeKind
 {
     root = 'root',
+
+    k8s = 'k8s',
+    cluster = 'cluster',
+    api = 'api',
+    version = 'version',
+    kind = 'kind',
+    resource = 'resource',
+
+    logic = 'logic',
     ns = 'ns',
     app = 'app',
     cont = 'cont',
@@ -21,12 +30,19 @@ export enum NodeKind
     psp = 'psp',
     netpols = 'netpols',
     netpol = 'netpol',
-    node = 'node',
     service = 'service',
     pod = 'pod',
     ingress = 'ingress',
     launcher = 'launcher',
-    storclass = 'storclass',
-    storage = 'storage',
     image = 'image',
+
+    infra = 'infra',
+    nodes = 'nodes',
+    pool = 'pool',
+    node = 'node',
+    storage = 'storage',
+    storclass = 'storclass',
+
+    repo = 'repo',
+    tag = 'tag',
 }
