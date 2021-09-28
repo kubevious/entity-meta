@@ -6,5 +6,6 @@ export { PROPS_TOOLTIPS } from './prop-tooltips';
 export { DIAGRAM_LABELS } from './diagram-labels';
 export { DIAGRAM_ICONS } from './diagram-icons';
 export { FLAGS_TOOLTIPS } from './flag-tooltips';
+export { FLAGS_ICONS } from './flag-icons';
 
 export { Dn, RnInfo, parseDn, makeDn } from './dn-utils'

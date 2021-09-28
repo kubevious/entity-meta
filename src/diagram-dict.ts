@@ -45,7 +45,11 @@ export class DiagramDict<T>
                 if (_.isString(value)) {
                     return value;
                 } else {
-                    return (<ResolveFunc<T>>value)(dnParts);
+                    const value2 = (<ResolveFunc<T>>value)(dnParts);
+                    if (value2) {
+                        return value2;
+                    }
+                    return this._getDefaultValue(dnParts);
                 }
             }
         }
@@ -58,13 +62,22 @@ export class DiagramDict<T>
                 if (_.isString(value)) {
                     return value;
                 } else {
-                    return (<ResolveFunc<T>>value)(dnParts);
+                    const value2 = (<ResolveFunc<T>>value)(dnParts);
+                    if (value2) {
+                        return value2;
+                    }
+                    return this._getDefaultValue(dnParts);
                 }
             }
         }
 
         console.error("[DiagramDict] Could not resolve value for: ", dnOrParts);
-        throw new Error("Could not resolve value for: " + dnOrParts);
+        return this._getDefaultValue(dnParts);
+    }
+
+    protected _getDefaultValue(dn: Dn)
+    {
+        throw new Error("Could not resolve value for: " + dn);
     }
 
 }

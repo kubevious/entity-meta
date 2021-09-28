@@ -245,6 +245,11 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     {
         return this._iconPath(`k8s/${x}`);
     }
+
+    protected _getDefaultValue(dn: Dn)
+    {
+        return this._iconPath('unknown.svg');
+    }
 }
 
 export const DIAGRAM_ICONS = new DiagramIconsDict();

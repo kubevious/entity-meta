@@ -1,7 +1,7 @@
 import { FlagKind } from './entities/flag-kind';
 import { EnumDictionary } from './types';
 
-export class FlagsTooltips
+export class FlagTooltips
 {
     private _values : EnumDictionary<FlagKind, string> = {};
 
@@ -28,5 +28,5 @@ export class FlagsTooltips
 
 }
 
-export const FLAGS_TOOLTIPS = new FlagsTooltips();
+export const FLAGS_TOOLTIPS = new FlagTooltips();
 

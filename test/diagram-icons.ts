@@ -53,6 +53,12 @@ describe('diagram-icons', function() {
         should(result).be.equal('/img/entities/k8s/deploy.svg');
     });
 
+    it('k8s-resource-05', function() {
+        const dn = "root/k8s/ns-[book]/api-[apps]/version-[v1]/kind-[abcd]";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/unknown.svg');
+    });
+
 
     it('logic-01', function() {
         const dn = "root/logic/ns-[gitlab]/app-[gitlab-cert-manager-webhook]";
@@ -76,6 +82,12 @@ describe('diagram-icons', function() {
         const dn = "root/logic/ns-[gitlab]/app-[gitlab-cert-manager-webhook]/launcher-[DaemonSet]";
         const result = DIAGRAM_ICONS.get(dn);
         should(result).be.equal('/img/entities/k8s/ds.svg');
+    });
+
+    it('logic-05', function() {
+        const dn = "root/logic/ns-[gitlab]/app-[gitlab-cert-manager-webhook]/launcher-[zzz]";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/logic/launcher.svg');
     });
 
     it('images-01', function() {
@@ -102,5 +114,13 @@ describe('diagram-icons', function() {
         const result = DIAGRAM_ICONS.get(dn);
         should(result).be.equal('/img/entities/infra/pool.svg');
     });
+
+
+    it('infra-01', function() {
+        const dn = "root/infra/xxx/yyy";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/unknown.svg');
+    });
+
     
 });
