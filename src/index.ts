@@ -8,4 +8,4 @@ export { DIAGRAM_ICONS } from './diagram-icons';
 export { FLAGS_TOOLTIPS } from './flag-tooltips';
 export { FLAGS_ICONS } from './flag-icons';
 
-export { Dn, RnInfo, parseDn, makeDn } from './dn-utils'
+export { Dn, RnInfo, parseDn, makeDn, parentDn } from './dn-utils'
