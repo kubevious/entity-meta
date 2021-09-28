@@ -14,12 +14,13 @@ export enum NodeKind
     app = 'app',
     cont = 'cont',
     initcont = 'initcont',
-    sidecont = 'sidecont',
+    // sidecont = 'sidecont',
     vols = 'vols',
     vol = 'vol',
     configMap = 'configMap',
     replicaSet = 'replicaSet',
     hpa = 'hpa',
+    port = 'port',
     svcaccnt = 'svcaccnt',
     rlbndg = 'rlbndg',
     crlbndg = 'crlbndg',
@@ -43,6 +44,7 @@ export enum NodeKind
     storage = 'storage',
     storclass = 'storclass',
 
+    images = 'images',
     repo = 'repo',
     tag = 'tag',
 }

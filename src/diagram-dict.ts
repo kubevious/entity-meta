@@ -9,30 +9,15 @@ export type ValueOrResolveFunc<T> = T | ResolveFunc<T>;
 
 export class DiagramDict<T>
 {
-    private _kindResolver : EnumDictionary<NodeKind, T> = {};
+    private _kindResolver : EnumDictionary<NodeKind, ValueOrResolveFunc<T>> = {};
     private _pathResolver : Record<string, ValueOrResolveFunc<T>> = {};
 
-    constructor()
-    {
-        // this.setKind(NodeKind.hpa, 'Horizontal Pod AutoScaler')
-
-        // this.setPath([NodeKind.root,
-        //               NodeKind.k8s,
-        //               NodeKind.api,
-        //               NodeKind.version,
-        //               NodeKind.version,
-        //               NodeKind.kind],
-        //              (dnParts) => {
-        //                 return 'Horizontal Pod AutoScaler';
-        //              })
-    }
-
-    private setKind(key: NodeKind, value: T)
+    protected setKind(key: NodeKind, value: ValueOrResolveFunc<T>)  : void
     {
         this._kindResolver[key] = value;
     }
 
-    private setPath(path: NodeKind[], value: ValueOrResolveFunc<T>)
+    protected setPath(path: NodeKind[], value: ValueOrResolveFunc<T>) : void
     {
         const names = path.map(x => x.toString());
         const key = names.join('-');
@@ -42,12 +27,21 @@ export class DiagramDict<T>
     get(dn: string)
     {
         const dnParts = DnUtils.parseDn(dn);
-        const kind = _.last(dnParts).kind;
+        const lastPart = _.last(dnParts);
+        if (!lastPart) {
+            throw new Error("Invalid dn: " + dn);
+        }
 
+        const kind = lastPart.kind;
+        
         {
-            const defaultValue = this._kindResolver[kind];
-            if (defaultValue) {
-                return defaultValue;
+            const value = this._kindResolver[kind];
+            if (value) {
+                if (_.isString(value)) {
+                    return value;
+                } else {
+                    return (<ResolveFunc<T>>value)(dnParts);
+                }
             }
         }
 
