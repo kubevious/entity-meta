@@ -7,6 +7,8 @@ export interface RnInfo {
     name: string | null
 }
 
+export type Dn = RnInfo[];
+
 export function splitDn(dn : string) : string[]
 {
     const parts : string[] = [];
@@ -76,7 +78,7 @@ export function getKind(kind: string) : NodeKind
     return <NodeKind>kind;
 }
 
-export function parseDn(dn : string) : RnInfo[]
+export function parseDn(dn : string) : Dn
 {
     const parts = splitDn(dn);
     return parts.map(x => parseRn(x));
