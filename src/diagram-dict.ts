@@ -63,6 +63,7 @@ export class DiagramDict<T>
             }
         }
 
+        console.error("[DiagramDict] Could not resolve value for: ", dnOrParts);
         throw new Error("Could not resolve value for: " + dnOrParts);
     }
 

@@ -75,6 +75,7 @@ export class DiagramLabelsDict
             return value;
         }
 
+        console.error("[DiagramLabels] Could not resolve value for: ", kind);
         throw new Error("Could not resolve value for: " + kind);
     }
 
