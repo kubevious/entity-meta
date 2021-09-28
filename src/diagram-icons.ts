@@ -169,8 +169,9 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this.setKind(NodeKind.vol, this._k8sIconPath('vol.svg'));
 
         this.setKind(NodeKind.ns, this._k8sIconPath('ns.svg'));
-        this.setKind(NodeKind.configMap, this._k8sIconPath('cm.svg'));
-        this.setKind(NodeKind.replicaSet, this._k8sIconPath('rs.svg'));
+        this.setKind(NodeKind.secret, this._k8sIconPath('secret.svg'));
+        this.setKind(NodeKind.configmap, this._k8sIconPath('cm.svg'));
+        this.setKind(NodeKind.replicaset, this._k8sIconPath('rs.svg'));
         this.setKind(NodeKind.hpa, this._k8sIconPath('hpa.svg'));
         this.setKind(NodeKind.svcaccnt, this._k8sIconPath('sa.svg'));
         this.setKind(NodeKind.rlbndg, this._k8sIconPath('rb.svg'));
