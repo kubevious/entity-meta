@@ -24,14 +24,19 @@ export class DiagramDict<T>
         this._pathResolver[key] = value;
     }
 
-    get(dn: string)
+    get(dnOrParts: string | RnInfo[])
     {
-        const dnParts = DnUtils.parseDn(dn);
-        const lastPart = _.last(dnParts);
-        if (!lastPart) {
-            throw new Error("Invalid dn: " + dn);
+        let dnParts : RnInfo[];
+        if (_.isString(dnOrParts)) {
+            dnParts = DnUtils.parseDn(dnOrParts);
+        } else {
+            dnParts = dnOrParts;
         }
 
+        const lastPart = _.last(dnParts);
+        if (!lastPart) {
+            throw new Error("Invalid dn: " + dnOrParts);
+        }
         const kind = lastPart.kind;
         
         {
@@ -58,7 +63,7 @@ export class DiagramDict<T>
             }
         }
 
-        throw new Error("Could not resolve value for: " + dn);
+        throw new Error("Could not resolve value for: " + dnOrParts);
     }
 
 }
