@@ -2,9 +2,9 @@ import _ from 'the-lodash';
 import { NodeKind } from './entities/node-kind';
 import { EnumDictionary } from './types';
 import * as DnUtils from './dn-utils';
-import { RnInfo } from './dn-utils';
+import { Dn } from './dn-utils';
 
-export type ResolveFunc<T> = (dnParts : RnInfo[]) => T;
+export type ResolveFunc<T> = (dnParts : Dn) => T;
 export type ValueOrResolveFunc<T> = T | ResolveFunc<T>;
 
 export class DiagramDict<T>
@@ -24,9 +24,9 @@ export class DiagramDict<T>
         this._pathResolver[key] = value;
     }
 
-    get(dnOrParts: string | RnInfo[])
+    get(dnOrParts: string | Dn)
     {
-        let dnParts : RnInfo[];
+        let dnParts : Dn;
         if (_.isString(dnOrParts)) {
             dnParts = DnUtils.parseDn(dnOrParts);
         } else {

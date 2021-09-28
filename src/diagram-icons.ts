@@ -1,6 +1,6 @@
 import _ from 'the-lodash';
 import { DiagramDict } from './diagram-dict';
-import { RnInfo } from './dn-utils';
+import { Dn } from './dn-utils';
 import { NodeKind } from './entities/node-kind';
 
 type KindIconDict = { [kind: string] : string};
@@ -114,13 +114,13 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         // - user.svg
     }
 
-    private _handleK8sClusteredCore(dnParts: RnInfo[])
+    private _handleK8sClusteredCore(dnParts: Dn)
     {
         const kind = dnParts[4].name!;
         return this._k8sClusteredCoreDict[kind] ?? null;
     }
 
-    private _handleK8sClusteredApi(dnParts: RnInfo[])
+    private _handleK8sClusteredApi(dnParts: Dn)
     {
         const api = dnParts[3].name!;
         const kind = dnParts[5].name!;
@@ -131,13 +131,13 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         return apiDict[kind] ?? null;
     }
 
-    private _handleK8sNamespacedCore(dnParts: RnInfo[])
+    private _handleK8sNamespacedCore(dnParts: Dn)
     {
         const kind = dnParts[4].name!;
         return this._k8sNamespacedCoreDict[kind] ?? null;
     }
 
-    private _handleK8sNamespacedApi(dnParts: RnInfo[])
+    private _handleK8sNamespacedApi(dnParts: Dn)
     {
         const api = dnParts[3].name!;
         const kind = dnParts[5].name!;

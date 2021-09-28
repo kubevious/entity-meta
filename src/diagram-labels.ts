@@ -1,12 +1,16 @@
-import { DiagramDict } from './diagram-dict';
+import _ from 'the-lodash';
 import { NodeKind } from './entities/node-kind';
+import { EnumDictionary } from './types';
+import { Dn } from './dn-utils';
 
-export class DiagramLabelsDict extends DiagramDict<string>
+export type ResolveFunc<T> = (dn : Dn) => T;
+export type ValueOrResolveFunc<T> = T | ResolveFunc<T>;
+export class DiagramLabelsDict
 {
+    private _kindResolver : EnumDictionary<NodeKind, string> = {};
+
     constructor()
     {
-        super();
-
         this.setKind(NodeKind.root, 'Root');
 
         /* K8s */
@@ -57,6 +61,23 @@ export class DiagramLabelsDict extends DiagramDict<string>
         this.setKind(NodeKind.repo, 'Repo');
         this.setKind(NodeKind.tag, 'Tag');
     }
+
+    protected setKind(key: NodeKind, value: string)  : void
+    {
+        this._kindResolver[key] = value;
+    }
+
+
+    get(kind: NodeKind)
+    {
+        const value = this._kindResolver[kind];
+        if (value) {
+            return value;
+        }
+
+        throw new Error("Could not resolve value for: " + kind);
+    }
+
 }
 
 export const DIAGRAM_LABELS = new DiagramLabelsDict();
