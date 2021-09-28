@@ -238,7 +238,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
 
     private _iconPath(x: string)
     {
-        return `img/entities/${x}`;
+        return `/img/entities/${x}`;
     }
 
     private _k8sIconPath(x: string)
