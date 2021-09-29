@@ -35,7 +35,9 @@ export class DiagramDict<T>
 
         const lastPart = _.last(dnParts);
         if (!lastPart) {
-            throw new Error("Invalid dn: " + dnOrParts);
+            console.error("[DiagramDict] invalid dn provided.");
+            // throw new Error("Invalid dn: " + dnOrParts);
+            return this._getDefaultValue([]);
         }
         const kind = lastPart.kind;
         
@@ -75,7 +77,7 @@ export class DiagramDict<T>
         return this._getDefaultValue(dnParts);
     }
 
-    protected _getDefaultValue(dn: Dn)
+    protected _getDefaultValue(dn?: Dn)
     {
         throw new Error("Could not resolve value for: " + dn);
     }
