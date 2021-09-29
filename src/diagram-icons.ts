@@ -1,3 +1,4 @@
+import { hasUncaughtExceptionCaptureCallback } from 'process';
 import _ from 'the-lodash';
 import { DiagramDict } from './diagram-dict';
 import { Dn } from './dn-utils';
@@ -150,12 +151,65 @@ export class DiagramIconsDict extends DiagramDict<string | null>
 
     private _setupInfra()
     {
+        this.setKind(NodeKind.k8s, this._k8sIconPath('api.svg'));
         this.setKind(NodeKind.infra, this._iconPath('infra/infra.svg'));
         this.setKind(NodeKind.nodes, this._iconPath('infra/nodes.svg'));
         this.setKind(NodeKind.pool, this._iconPath('infra/pool.svg'));
         this.setKind(NodeKind.node, this._k8sIconPath('node.svg'));
         this.setKind(NodeKind.storage, this._iconPath('infra/storage.svg'));
         this.setKind(NodeKind.storclass, this._iconPath('infra/storclass.svg'));
+
+        this.setPath([NodeKind.root, NodeKind.infra, NodeKind.k8s, NodeKind.api, NodeKind.version, NodeKind.kind],
+            (dnParts) =>
+            {
+                const api = dnParts[3].name!;
+                const kind = dnParts[5].name!;
+
+                {
+                    const apiDict = this._k8sClusteredApiDict[api];
+                    if (apiDict) {
+                        const value = apiDict[kind];
+                        if (value) {
+                            return value;
+                        }
+                    }
+                }
+
+                {
+                    const apiDict = this._k8sNamespacedApiDict[api];
+                    if (apiDict) {
+                        const value = apiDict[kind];
+                        if (value) {
+                            return value;
+                        }
+                    }
+                }
+
+                return null;
+            });
+
+        this.setPath([NodeKind.root, NodeKind.infra, NodeKind.k8s, NodeKind.version, NodeKind.kind],
+            (dnParts) =>
+            {
+                const kind = dnParts[4].name!;
+
+                {
+                    const value = this._k8sClusteredCoreDict[kind];
+                    if (value) {
+                        return value;
+                    }
+                }
+
+                {
+                    const value = this._k8sNamespacedCoreDict[kind];
+                    if (value) {
+                        return value;
+                    }
+
+                }
+
+                return null;
+            });
     }
     
     private _setupLogic()

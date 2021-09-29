@@ -116,11 +116,25 @@ describe('diagram-icons', function() {
     });
 
 
-    it('infra-01', function() {
+    it('infra-02', function() {
         const dn = "root/infra/xxx/yyy";
         const result = DIAGRAM_ICONS.get(dn);
         should(result).be.equal('/img/entities/unknown.svg');
     });
 
+    it('infra-03', function() {
+        const dn = "root/infra/k8s/api-[apps]/version-[v1]/kind-[DaemonSet]";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/k8s/ds.svg');
+    });
+
+    it('infra-04', function() {
+        const dn = "root/infra/k8s/api-[rbac.authorization.k8s.io]/version-[v1]/kind-[ClusterRole]";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/k8s/c-role.svg');
+    });
+
+
+    
     
 });
