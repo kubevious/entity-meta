@@ -75,9 +75,9 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this._setK8sNamespacedApi('rbac.authorization.k8s.io', 'Role', 'role.svg');
 
         /* K8s :: Namespace :: Networking */
-        this._setK8sNamespacedApi('networking', 'NetworkPolicy', 'netpol.svg');
-        this._setK8sNamespacedApi('networking', 'Ingress', 'ing.svg');
-        this._setK8sNamespacedApi('networking', 'IngressClass', 'ing.svg');
+        this._setK8sNamespacedApi('networking.k8s.io', 'NetworkPolicy', 'netpol.svg');
+        this._setK8sNamespacedApi('networking.k8s.io', 'Ingress', 'ing.svg');
+        this._setK8sNamespacedApi('networking.k8s.io', 'IngressClass', 'ing.svg');
 
         /* K8s :: Namespace :: Discovery */
         this._setK8sNamespacedApi('discovery.k8s.io', 'EndpointSlice', 'ep.svg');

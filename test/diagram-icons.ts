@@ -134,7 +134,11 @@ describe('diagram-icons', function() {
         should(result).be.equal('/img/entities/k8s/c-role.svg');
     });
 
-
+    it('infra-05', function() {
+        const dn = "root/infra/k8s/api-[networking.k8s.io]/version-[v1]/kind-[NetworkPolicy]";
+        const result = DIAGRAM_ICONS.get(dn);
+        should(result).be.equal('/img/entities/k8s/netpol.svg');
+    });
     
     
 });
