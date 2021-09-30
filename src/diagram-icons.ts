@@ -214,6 +214,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     
     private _setupLogic()
     {
+        this.setKind(NodeKind.logic, this._iconPath('logic/logic.svg'));
         this.setKind(NodeKind.app, this._iconPath('logic/app.svg'));
         this.setKind(NodeKind.cont, this._iconPath('logic/cont.svg'));
         this.setKind(NodeKind.initcont, this._iconPath('logic/initcont.svg'));
@@ -259,6 +260,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     
     private _setupImages()
     {
+        this.setKind(NodeKind.images, this._iconPath('images/images.svg'));
         this.setKind(NodeKind.repo, this._iconPath('images/repository.svg'));
         this.setKind(NodeKind.tag, this._iconPath('images/tag.svg'));
     }
