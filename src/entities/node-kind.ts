@@ -50,4 +50,8 @@ export enum NodeKind
     tag = 'tag',
 
     summary = 'summary',
+
+    rule_engine = 'rule_engine',
+    rule = 'rule',
+    rule_items = 'rule_items',
 }
