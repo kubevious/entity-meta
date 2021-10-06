@@ -54,4 +54,5 @@ export enum NodeKind
     rule_engine = 'rule_engine',
     rule = 'rule',
     rule_items = 'rule_items',
+    rule_logs = 'rule_logs',
 }
