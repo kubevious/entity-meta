@@ -1,6 +1,6 @@
 {
   "name": "@kubevious/entity-meta",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Kubevious Entity Meta",
   "main": "dist/index.js",
   "types": "dist",
