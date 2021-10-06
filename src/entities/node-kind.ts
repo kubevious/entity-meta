@@ -48,4 +48,6 @@ export enum NodeKind
     images = 'images',
     repo = 'repo',
     tag = 'tag',
+
+    summary = 'summary',
 }
