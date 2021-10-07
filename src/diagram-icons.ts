@@ -14,9 +14,13 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     private _k8sNamespacedCoreDict : KindIconDict = {};
     private _k8sNamespacedApiDict : ApiIconDict = {};
 
+    private _k8sUnknownIcon: string;
+
     constructor()
     {
         super();
+
+        this._k8sUnknownIcon = this._k8sIconPath('unknown.svg');
 
         this._setupK8s();
         this._setupLogic();
@@ -53,6 +57,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this._setK8sNamespacedCore('LimitRange', 'limits.svg');
         this._setK8sNamespacedCore('ResourceQuota', 'quota.svg');
         this._setK8sNamespacedCore('Endpoints', 'ep.svg');
+        this._setK8sNamespacedCore('Event', 'event.png');
         
         /* K8s :: Namespace :: App */
         this._setK8sNamespacedApi('apps', 'Deployment', 'deploy.svg');
@@ -118,7 +123,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     private _handleK8sClusteredCore(dnParts: Dn)
     {
         const kind = dnParts[4].name!;
-        return this._k8sClusteredCoreDict[kind] ?? null;
+        return this._k8sClusteredCoreDict[kind] ?? this._k8sUnknownIcon;
     }
 
     private _handleK8sClusteredApi(dnParts: Dn)
@@ -127,15 +132,15 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         const kind = dnParts[5].name!;
         const apiDict = this._k8sClusteredApiDict[api];
         if (!apiDict) {
-            return null;
+            return this._k8sUnknownIcon;
         }
-        return apiDict[kind] ?? null;
+        return apiDict[kind] ?? this._k8sUnknownIcon;
     }
 
     private _handleK8sNamespacedCore(dnParts: Dn)
     {
         const kind = dnParts[4].name!;
-        return this._k8sNamespacedCoreDict[kind] ?? null;
+        return this._k8sNamespacedCoreDict[kind] ?? this._k8sUnknownIcon;
     }
 
     private _handleK8sNamespacedApi(dnParts: Dn)
@@ -144,9 +149,9 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         const kind = dnParts[5].name!;
         const apiDict = this._k8sNamespacedApiDict[api];
         if (!apiDict) {
-            return null;
+            return this._k8sUnknownIcon;
         }
-        return apiDict[kind] ?? null;
+        return apiDict[kind] ?? this._k8sUnknownIcon;
     }
 
     private _setupInfra()
@@ -185,7 +190,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
                     }
                 }
 
-                return null;
+                return this._k8sUnknownIcon;
             });
 
         this.setPath([NodeKind.root, NodeKind.infra, NodeKind.k8s, NodeKind.version, NodeKind.kind],
@@ -208,7 +213,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
 
                 }
 
-                return null;
+                return this._k8sUnknownIcon;
             });
     }
     

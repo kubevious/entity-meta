@@ -56,7 +56,7 @@ describe('diagram-icons', function() {
     it('k8s-resource-05', function() {
         const dn = "root/k8s/ns-[book]/api-[apps]/version-[v1]/kind-[abcd]";
         const result = DIAGRAM_ICONS.get(dn);
-        should(result).be.equal('/img/entities/unknown.svg');
+        should(result).be.equal('/img/entities/k8s/unknown.svg');
     });
 
 
