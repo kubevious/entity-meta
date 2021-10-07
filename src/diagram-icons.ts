@@ -1,4 +1,3 @@
-import { hasUncaughtExceptionCaptureCallback } from 'process';
 import _ from 'the-lodash';
 import { DiagramDict } from './diagram-dict';
 import { Dn } from './dn-utils';
