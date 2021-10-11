@@ -8,6 +8,6 @@ export { DIAGRAM_ICONS } from './diagram-icons';
 export { FLAGS_TOOLTIPS } from './flag-tooltips';
 export { FLAGS_ICONS } from './flag-icons';
 
-export { TOP_ROOTS } from './diagram-root';
+export { DiagramRoot, TOP_ROOTS } from './diagram-root';
 
 export { Dn, RnInfo, parseDn, makeDn, parentDn } from './dn-utils'
