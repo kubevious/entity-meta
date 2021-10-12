@@ -25,6 +25,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this._setupLogic();
         this._setupInfra();
         this._setupImages();
+        this._setupGateway();
     }
 
     private _setupK8s()
@@ -267,6 +268,13 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this.setKind(NodeKind.images, this._iconPath('images/images.svg'));
         this.setKind(NodeKind.repo, this._iconPath('images/repository.svg'));
         this.setKind(NodeKind.tag, this._iconPath('images/tag.svg'));
+    }
+
+    private _setupGateway()
+    {
+        this.setKind(NodeKind.gateway, this._iconPath('gateway/gateway.png'));
+        this.setKind(NodeKind.domain, this._iconPath('gateway/domain.png'));
+        this.setKind(NodeKind.url, this._iconPath('gateway/url.png'));
     }
     
     //

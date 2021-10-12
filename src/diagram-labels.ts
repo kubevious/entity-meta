@@ -61,6 +61,11 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.images, 'Images');
         this.setKind(NodeKind.repo, 'Repo');
         this.setKind(NodeKind.tag, 'Tag');
+
+        /* GATEWAY */
+        this.setKind(NodeKind.gateway, 'Gateway');
+        this.setKind(NodeKind.domain, 'Domain');
+        this.setKind(NodeKind.url, 'URL');
     }
 
     protected setKind(key: NodeKind, value: string)  : void

@@ -49,6 +49,10 @@ export enum NodeKind
     repo = 'repo',
     tag = 'tag',
 
+    gateway = 'gateway',
+    domain = 'domain',
+    url = 'url',
+
     summary = 'summary',
 
     rule_engine = 'rule_engine',
