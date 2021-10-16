@@ -53,6 +53,9 @@ export enum NodeKind
     domain = 'domain',
     url = 'url',
 
+    pack = 'pack',
+    helm = 'helm',
+
     summary = 'summary',
 
     rule_engine = 'rule_engine',

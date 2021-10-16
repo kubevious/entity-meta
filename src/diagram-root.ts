@@ -17,6 +17,10 @@ export const TOP_ROOTS : DiagramRoot[] = [
         dn: 'root/gateway'
     },
     {
+        title: 'Package',
+        dn: 'root/pack'
+    },
+    {
         title: 'K8s',
         dn: 'root/k8s'
     },

@@ -26,6 +26,7 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this._setupInfra();
         this._setupImages();
         this._setupGateway();
+        this._setupPackage();
     }
 
     private _setupK8s()
@@ -277,6 +278,11 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this.setKind(NodeKind.url, this._iconPath('gateway/url.png'));
     }
     
+    private _setupPackage()
+    {
+        this.setKind(NodeKind.pack, this._iconPath('pack/pack.png'));
+        this.setKind(NodeKind.helm, this._iconPath('pack/helm.svg'));
+    }
     //
 
     private _setK8sClusteredCore(kind: string, icon: string) : void
