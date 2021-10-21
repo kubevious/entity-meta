@@ -9,7 +9,7 @@ describe('flag-kind', function() {
 
     it('case-01', function() {
         
-        for(let key in FlagKind)
+        for(const key in FlagKind)
         {
             should(key).be.a.String();
 

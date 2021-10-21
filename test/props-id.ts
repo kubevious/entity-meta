@@ -3,23 +3,23 @@ import should = require('should');
 
 import _ from 'the-lodash';
 
-import { PropsKind } from '../src';
+import { PropsId } from '../src';
 import { camelToHyphenSnake } from '../src/utils';
 
-describe('props-kind', function() {
+describe('props-id', function() {
 
     it('case-01', function() {
         
-        for(const key in PropsKind)
+        for(const key in PropsId)
         {
             should(key).be.a.String();
 
-            const value = (<any>PropsKind)[key];
+            const value = (<any>PropsId)[key];
             should(value).be.a.String();
 
             const convertedKey = camelToHyphenSnake(key);
 
-            should(convertedKey).be.equal(value, "PropsKind enum keys and values should be identical.");
+            should(convertedKey).be.equal(value, "PropsId enum keys and values should be identical.");
         }
     });
 
