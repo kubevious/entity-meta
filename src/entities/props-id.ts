@@ -14,9 +14,14 @@ export enum PropsId
     appConsumption = 'app-consumption',
 
     sharedWith = 'shared-with',
+    usedBy = 'used-by',
 
     ingressApp = 'ingress-app',
     ingressCidr = 'ingress-cidr',
     egressApp = 'egress-app',
     egressCidr = 'egress-cidr',
+
+    targetLinks = 'target-links',
+
+    radioactive = 'radioactive',
 }
