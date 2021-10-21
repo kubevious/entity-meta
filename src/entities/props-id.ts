@@ -8,10 +8,13 @@ export enum PropsId
 
     resources = 'resources',
     resourcesPerPod = 'resources-per-pod',
+    nodeResources = 'node-resources',
+    poolResources = 'pool-resources',
     clusterConsumption = 'cluster-consumption',
     clusterResources = 'cluster-resources',
-    nodeResources = 'node-resources',
     appConsumption = 'app-consumption',
+
+    resourceRoleMatrix = 'resource-role-matrix',
 
     sharedWith = 'shared-with',
     usedBy = 'used-by',
@@ -24,4 +27,8 @@ export enum PropsId
     targetLinks = 'target-links',
 
     radioactive = 'radioactive',
+
+    contents = 'contents',
+
+    mount = 'mount',
 }
