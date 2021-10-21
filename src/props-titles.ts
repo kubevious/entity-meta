@@ -13,6 +13,8 @@ export class PropsTitlesDict
         this.setTitle(PropsId.labels, 'Labels');
         this.setTitle(PropsId.annotations, 'Annotations');
         
+        this.setTitle(PropsId.targetLinks, 'Links');
+
         this.setTitle(PropsId.env, 'Environment Variables');
 
         this.setTitle(PropsId.resources, 'Resources');
@@ -40,6 +42,11 @@ export class PropsTitlesDict
         this.setTitle(PropsId.contents, 'Contents');
 
         this.setTitle(PropsId.mount, 'Mount Config');
+
+        // Summary
+        this.setTitle(PropsId.infraCounters, 'Infrastructure Summary');
+        this.setTitle(PropsId.topIssueNamespaces, 'Top Namespaces with Issues');
+        this.setTitle(PropsId.topIssues, 'Top Issues');
     }
 
     protected setTitle(key: PropsId, value: string)  : void

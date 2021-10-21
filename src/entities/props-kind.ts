@@ -7,5 +7,6 @@ export enum PropsKind
     dnList = 'dn-list',
     yaml = 'yaml',
     table = 'table',
+    links = 'links',
     teleportation = 'teleportation'
 }

@@ -9,6 +9,7 @@ export enum PropsId
     usedBy = 'used-by',
 
     targetLinks = 'target-links',
+    sourceLinks = 'source-links',
 
     env = 'env',
 
@@ -32,4 +33,8 @@ export enum PropsId
     contents = 'contents',
 
     mount = 'mount',
+
+    infraCounters = 'infra-counters',
+    topIssueNamespaces = 'top-issue-namespaces',
+    topIssues = 'top-issues',
 }
