@@ -3,7 +3,9 @@ export { FlagKind } from './entities/flag-kind'
 export { PropsId } from './entities/props-id'
 export { PropsKind } from './entities/props-kind'
 
-export { PROPS_TOOLTIPS } from './prop-tooltips';
+export { PROPS_TITLES } from './props-titles';
+export { PROPS_TOOLTIPS } from './props-tooltips';
+export { PROPS_ORDER } from './props-order';
 export { DIAGRAM_LABELS } from './diagram-labels';
 export { DIAGRAM_ICONS } from './diagram-icons';
 export { FLAGS_TOOLTIPS } from './flag-tooltips';

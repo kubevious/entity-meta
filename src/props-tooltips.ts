@@ -25,7 +25,7 @@ export class PropsTooltips
         this.set(PropsId.resources, {
             owner: {
                 [NodeKind.ns]: 'Resource usage for all pod replicas within the namespace.', 
-                [NodeKind.app]: 'Resource usage for all pod replicas witing the application.',
+                [NodeKind.app]: 'Resource usage for all pod replicas within the application.',
                 [NodeKind.initcont]: 'Resource usage for a single container.',
                 [NodeKind.cont]: 'Resource usage for a single container.',
                 [NodeKind.node]: 'Resources provided by this node.'
@@ -34,6 +34,7 @@ export class PropsTooltips
         });
         this.set(PropsId.resourcesPerPod, 'Resource usage per single pod.');
         this.set(PropsId.clusterConsumption, 'Consumption of overall cluster resources.');
+        this.set(PropsId.poolResources, 'Resources provided by nodes within the node pool.');
         this.set(PropsId.clusterResources, 'Resources provided by all nodes within the cluster.');
         this.set(PropsId.nodeResources, 'Resources provided by a single node. Describes the weakest node in the cluster.');
         this.set(PropsId.appConsumption, 'List of apps and resources they consume. Apps that tame most resources are on the top.');

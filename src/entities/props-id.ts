@@ -4,6 +4,12 @@ export enum PropsId
     config = 'config',
     labels = 'labels',
     annotations = 'annotations',
+
+    sharedWith = 'shared-with',
+    usedBy = 'used-by',
+
+    targetLinks = 'target-links',
+
     env = 'env',
 
     resources = 'resources',
@@ -16,15 +22,10 @@ export enum PropsId
 
     resourceRoleMatrix = 'resource-role-matrix',
 
-    sharedWith = 'shared-with',
-    usedBy = 'used-by',
-
     ingressApp = 'ingress-app',
     ingressCidr = 'ingress-cidr',
     egressApp = 'egress-app',
     egressCidr = 'egress-cidr',
-
-    targetLinks = 'target-links',
 
     radioactive = 'radioactive',
 
