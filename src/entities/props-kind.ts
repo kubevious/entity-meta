@@ -8,5 +8,7 @@ export enum PropsKind
     yaml = 'yaml',
     table = 'table',
     links = 'links',
-    teleportation = 'teleportation'
+    teleportation = 'teleportation',
+
+    config = 'config'
 }
