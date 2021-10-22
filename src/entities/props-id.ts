@@ -34,6 +34,7 @@ export enum PropsId
 
     mount = 'mount',
 
+    appCounters = 'app-counters',
     infraCounters = 'infra-counters',
     topIssueNamespaces = 'top-issue-namespaces',
     topIssues = 'top-issues',

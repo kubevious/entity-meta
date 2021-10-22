@@ -44,6 +44,8 @@ export class PropsTitlesDict
         this.setTitle(PropsId.mount, 'Mount Config');
 
         // Summary
+        
+        this.setTitle(PropsId.appCounters, 'Configuration Summary');
         this.setTitle(PropsId.infraCounters, 'Infrastructure Summary');
         this.setTitle(PropsId.topIssueNamespaces, 'Top Namespaces with Issues');
         this.setTitle(PropsId.topIssues, 'Top Issues');
