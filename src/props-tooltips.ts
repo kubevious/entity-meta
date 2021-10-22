@@ -20,7 +20,13 @@ export class PropsTooltips
         this.set(PropsId.labels, 'Kubernetes Labels');
         this.set(PropsId.annotations, 'Kubernetes Annotations');
 
+        this.set(PropsId.targetLinks, 'Links to related objects');
+
+        this.set(PropsId.sharedWith, 'Other objects that also use this configuration.');
+
         this.set(PropsId.env, 'Environment variables applied to this container. Also contains variables defined in related ConfigMaps.');
+        
+        this.set(PropsId.resourceRoleMatrix, 'Matrix of granted Kubernetes RBAC rules.');
 
         this.set(PropsId.resources, {
             owner: {
@@ -39,8 +45,6 @@ export class PropsTooltips
         this.set(PropsId.nodeResources, 'Resources provided by a single node. Describes the weakest node in the cluster.');
         this.set(PropsId.appConsumption, 'List of apps and resources they consume. Apps that tame most resources are on the top.');
     
-        this.set(PropsId.sharedWith, 'Other objects that also use this configuration.');
-
         this.set(PropsId.ingressApp, 'Ingress network policy rules that allow or deny traffic from other applications.');
         this.set(PropsId.ingressCidr, 'Ingress network policy rules that allow or deny traffic from CIDR blocks.');
         this.set(PropsId.egressApp, 'Egress network policy rules that allow or deny traffic to other applications.');
