@@ -17,6 +17,8 @@ export enum NodeKind
     // sidecont = 'sidecont',
     vols = 'vols',
     vol = 'vol',
+    mounts = 'mounts',
+    mount = 'mount',
     configmap = 'configmap',
     secret = 'secret',
     replicaset = 'replicaset',

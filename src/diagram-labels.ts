@@ -29,6 +29,8 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.initcont, 'Init Container');
         this.setKind(NodeKind.vols, 'Volumes');
         this.setKind(NodeKind.vol, 'Volume');
+        this.setKind(NodeKind.mounts, 'Mounts');
+        this.setKind(NodeKind.mount, 'Mount');
         this.setKind(NodeKind.secret, 'Secret');
         this.setKind(NodeKind.configmap, 'Config Map');
         this.setKind(NodeKind.replicaset, 'Replica Set');

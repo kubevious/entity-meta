@@ -228,6 +228,8 @@ export class DiagramIconsDict extends DiagramDict<string | null>
         this.setKind(NodeKind.image, this._iconPath('logic/image.svg'));
         this.setKind(NodeKind.vols, this._k8sIconPath('vol.svg'));
         this.setKind(NodeKind.vol, this._k8sIconPath('vol.svg'));
+        this.setKind(NodeKind.mounts, this._iconPath('logic/mounts.png'));
+        this.setKind(NodeKind.mount, this._iconPath('logic/mount.png'));
 
         this.setKind(NodeKind.ns, this._k8sIconPath('ns.svg'));
         this.setKind(NodeKind.secret, this._k8sIconPath('secret.svg'));
