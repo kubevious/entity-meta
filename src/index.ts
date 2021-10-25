@@ -9,6 +9,7 @@ export { PROPS_ORDER } from './props-order';
 export { PROPS_EXPANDED } from './props-expander';
 export { DIAGRAM_LABELS } from './diagram-labels';
 export { DIAGRAM_ICONS } from './diagram-icons';
+export { DIAGRAM_ORDER } from './diagram-order';
 export { FLAGS_TOOLTIPS } from './flag-tooltips';
 export { FLAGS_ICONS } from './flag-icons';
 
