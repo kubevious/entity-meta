@@ -42,6 +42,8 @@ export class PropsOrderDict
         this.setTitle(PropsId.config, 700);
 
         this.setTitle(PropsId.contents, 800);
+
+        this.setTitle(PropsId.ruleAssistant, 5000);
     }
 
     protected setTitle(key: PropsId, value: number)  : void

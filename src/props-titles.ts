@@ -49,6 +49,10 @@ export class PropsTitlesDict
         this.setTitle(PropsId.infraCounters, 'Infrastructure Summary');
         this.setTitle(PropsId.topIssueNamespaces, 'Top Namespaces with Issues');
         this.setTitle(PropsId.topIssues, 'Top Issues');
+
+
+        // Rules
+        this.setTitle(PropsId.ruleAssistant, 'Rule Assistant');
     }
 
     protected setTitle(key: PropsId, value: string)  : void
