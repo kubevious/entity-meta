@@ -12,6 +12,7 @@ export class DiagramOrderDict
 
     constructor()
     {
+        // Logic Scope
         this.setOrder(NodeKind.initcont, 100);
         this.setOrder(NodeKind.cont, 110);
 
@@ -27,6 +28,11 @@ export class DiagramOrderDict
         
         this.setOrder(NodeKind.service, 300);
         this.setOrder(NodeKind.ingress, 320);
+
+
+        // K8s Scope
+        this.setOrder(NodeKind.version, 100);
+        this.setOrder(NodeKind.api, 200);
     }
 
     protected setOrder(key: NodeKind, value: number)  : void
