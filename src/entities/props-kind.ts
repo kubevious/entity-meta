@@ -10,5 +10,7 @@ export enum PropsKind
     links = 'links',
     teleportation = 'teleportation',
 
-    config = 'config'
+    config = 'config',
+
+    ruleAssistant = 'rule-assistant'
 }

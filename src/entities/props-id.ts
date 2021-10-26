@@ -39,9 +39,10 @@ export enum PropsId
     topIssueNamespaces = 'top-issue-namespaces',
     topIssues = 'top-issues',
 
-
     ruleConfig = 'rule-config',
     ruleItems = 'rule-items',
     ruleLogs = 'rule-logs',
     markerItems = 'marker-items',
+
+    ruleAssistant = 'rule-assistant',
 }
