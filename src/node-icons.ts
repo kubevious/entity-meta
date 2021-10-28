@@ -1,12 +1,12 @@
 import _ from 'the-lodash';
-import { DiagramDict } from './diagram-dict';
+import { NodeDict } from './node-dict';
 import { Dn } from './dn-utils';
 import { NodeKind } from './entities/node-kind';
 
 type KindIconDict = { [kind: string] : string};
 type ApiIconDict = { [api: string] : KindIconDict};
 
-export class DiagramIconsDict extends DiagramDict<string | null>
+export class NodeIconsDict extends NodeDict<string | null>
 {
     private _k8sClusteredCoreDict : KindIconDict = {};
     private _k8sClusteredApiDict : ApiIconDict = {};
@@ -329,4 +329,4 @@ export class DiagramIconsDict extends DiagramDict<string | null>
     }
 }
 
-export const DIAGRAM_ICONS = new DiagramIconsDict();
+export const NODE_ICONS = new NodeIconsDict();

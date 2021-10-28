@@ -7,7 +7,7 @@ import { Dn } from './dn-utils';
 export type ResolveFunc<T> = (dnParts : Dn) => T;
 export type ValueOrResolveFunc<T> = T | ResolveFunc<T>;
 
-export class DiagramDict<T>
+export class NodeDict<T>
 {
     private _kindResolver : EnumDictionary<NodeKind, ValueOrResolveFunc<T>> = {};
     private _pathResolver : Record<string, ValueOrResolveFunc<T>> = {};

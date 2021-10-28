@@ -50,6 +50,7 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.ingress, 'Ingress');
         this.setKind(NodeKind.launcher, 'Launcher');
         this.setKind(NodeKind.image, 'Image');
+        this.setKind(NodeKind.port, 'Port');
 
         /* INFRA */
         this.setKind(NodeKind.infra, 'Infra');
@@ -95,4 +96,4 @@ export class DiagramLabelsDict
 
 }
 
-export const DIAGRAM_LABELS = new DiagramLabelsDict();
+export const NODE_LABELS = new DiagramLabelsDict();

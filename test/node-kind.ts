@@ -9,7 +9,7 @@ describe('node-kind', function() {
 
     it('case-01', function() {
         
-        for(let key in NodeKind)
+        for(const key in NodeKind)
         {
             should(key).be.a.String();
 
