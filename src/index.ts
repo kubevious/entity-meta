@@ -20,6 +20,6 @@ export { FLAGS_ICONS } from './flag-icons';
 
 export { DiagramRoot, TOP_ROOTS } from './diagram-root';
 
-export { Dn, RnInfo, parseDn, makeDn, parentDn } from './dn-utils'
+export { Dn, RnInfo, parseDn, makeDn, parentDn, getKind } from './dn-utils'
 
 export { EnumDictionary } from './types';
