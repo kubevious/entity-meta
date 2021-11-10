@@ -70,10 +70,18 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.domain, 'Domain');
         this.setKind(NodeKind.url, 'URL');
 
-
         /* PACKAGE */
         this.setKind(NodeKind.pack, 'Package');
         this.setKind(NodeKind.helm, 'Helm');
+
+        /* NON-DIAGRAM :: SUMMARY */
+        this.setKind(NodeKind.summary, 'Summary');
+
+        /* NON-DIAGRAM :: RULE-ENGINE */
+        this.setKind(NodeKind.rule_engine, 'Rule Engine');
+        this.setKind(NodeKind.rule, 'rule');
+        this.setKind(NodeKind.rule_items, 'rule_items');
+        this.setKind(NodeKind.rule_logs, 'rule_logs');
     }
 
     protected setKind(key: NodeKind, value: string)  : void
