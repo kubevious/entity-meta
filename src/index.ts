@@ -23,3 +23,7 @@ export { DiagramRoot, TOP_ROOTS } from './diagram-root';
 export { Dn, RnInfo, parseDn, makeDn, parentDn, getKind } from './dn-utils'
 
 export { EnumDictionary } from './types';
+
+export { ValidatorID, VALIDATOR_IDs } from './validation/validator-id'
+export { ValidationConfig, ValidatorSetting } from './validation/validation-config'
+export { DEFAULT_VALIDATION_CONFIG } from './validation/default-config'
