@@ -32,7 +32,7 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
 
     [ID.UNUSED_CONFIG_MAP]: "warn",
     [ID.UNUSED_SERVICE_ACCOUNT]: "warn",
-    [ID.UNUSED_CRB]: "warn",
+    [ID.UNUSED_ROLE_BINDING]: "warn",
     [ID.UNUSED_ROLE]: "warn",
     [ID.UNUSED_PVC]: "warn",
     [ID.UNUSED_PV]: "warn",
