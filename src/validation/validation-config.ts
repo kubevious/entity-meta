@@ -1,6 +1,11 @@
 import { ValidatorID } from './validator-id';
 
-export type ValidatorSetting = undefined | 'error' | 'warn';
+export enum ValidatorSetting
+{
+    off = 'off',
+    error = 'error',
+    warn = 'warn'
+}
 
-export type ValidationConfig = Record<ValidatorID, ValidatorSetting>;
+export type ValidationConfig = Record<ValidatorID, ValidatorSetting | undefined>;
 // export type ValidationConfig = Record<keyof typeof ValidatorID, ValidatorSetting>;
