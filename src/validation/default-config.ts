@@ -8,23 +8,23 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
 
     [ID.MISSING_ROLE]: ValidatorSetting.error,
     [ID.MISSING_BINDING_TO_SERVICE_ACCOUNT]: ValidatorSetting.error,
-    [ID.UNSET_SERVICE_ACCOUNT]: ValidatorSetting.off,
     [ID.MISSING_CONTAINER_TO_SERVICE_ACCOUNT]: ValidatorSetting.error,
     [ID.MISSING_PSP]: ValidatorSetting.error,
     [ID.MISSING_VOLUME_MOUNT_CONFIG_MAP]: ValidatorSetting.error,
     [ID.MISSING_ENV_CONFIG_MAP]: ValidatorSetting.error,
-    [ID.EMPTY_ENV_CONFIG_MAP]: ValidatorSetting.off,
-    [ID.MISSING_SECRET]: ValidatorSetting.error,
+    [ID.MISSING_VOLUME_MOUNT_SECRET]: ValidatorSetting.error,
+    [ID.MISSING_ENV_SECRET]: ValidatorSetting.error,
     [ID.MISSING_PVC]: ValidatorSetting.error,
     [ID.MISSING_PV]: ValidatorSetting.error,
-    [ID.MISSING_OTHER]: ValidatorSetting.error,
-    [ID.MISSING_APP]: ValidatorSetting.error, // Used in HPA, Service
-    [ID.MISSING_SERVICE]: ValidatorSetting.error,
+    // [ID.MISSING_OTHER]: ValidatorSetting.error,
+    [ID.MISSING_HPA_APP]: ValidatorSetting.error,
+    [ID.MISSING_SERVICE_APP]: ValidatorSetting.error,
+    [ID.MISSING_INGRESS_SERVICE]: ValidatorSetting.error,
 
-    [ID.EMPTY_CONFIG_MAP]: ValidatorSetting.warn,
-    [ID.EMPTY_SECRET]: ValidatorSetting.warn,
+    [ID.EMPTY_ENV_CONFIG_MAP]: ValidatorSetting.off,
+    [ID.EMPTY_ENV_SECRET]: ValidatorSetting.off,
 
-    [ID.SERVICE_ACCOUNT_NOT_SET]: ValidatorSetting.warn,
+    [ID.UNSET_SERVICE_ACCOUNT]: ValidatorSetting.off,
 
     [ID.UNOWNED_REPLICA_SET]: ValidatorSetting.warn,
     [ID.UNOWNED_POD]: ValidatorSetting.warn,
