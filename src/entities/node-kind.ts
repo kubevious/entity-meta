@@ -38,6 +38,8 @@ export enum NodeKind
     pod = 'pod',
     ingress = 'ingress',
     launcher = 'launcher',
+    job = 'job',
+    cronjob = 'cronjob',
     image = 'image',
 
     infra = 'infra',

@@ -249,6 +249,8 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.service, this._k8sIconPath('svc.svg'));
         this.setKind(NodeKind.ingress, this._k8sIconPath('ing.svg'));
         this.setKind(NodeKind.pod, this._k8sIconPath('pod.svg'));
+        this.setKind(NodeKind.job, this._k8sIconPath('job.svg'));
+        this.setKind(NodeKind.cronjob, this._k8sIconPath('cronjob.svg'));
 
         this.setKind(NodeKind.launcher,
             (dnParts) => {

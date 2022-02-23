@@ -51,6 +51,8 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.launcher, 'Launcher');
         this.setKind(NodeKind.image, 'Image');
         this.setKind(NodeKind.port, 'Port');
+        this.setKind(NodeKind.job, 'Job');
+        this.setKind(NodeKind.cronjob, 'CronJob');
 
         /* INFRA */
         this.setKind(NodeKind.infra, 'Infra');
