@@ -5,11 +5,6 @@ import { ValidatorCategory } from './categories';
 import { builder } from './validators';
 import { VALIDATOR_CATEGORIES } from './categories';
 
-export function getValidatorDocs(validatorId: ValidatorID) : ValidatorDocs
-{
-    return builder.get(validatorId);
-}
-
 export class ValidatorsMetaFacade
 {
     private _categories: ValidatorCategoryMetaData[] = [];
@@ -33,7 +28,7 @@ export class ValidatorsMetaFacade
 
         for(const validatorId of VALIDATOR_IDs)
         {
-            const validatorDocs = getValidatorDocs(validatorId);
+            const validatorDocs = this.getValidatorDocs(validatorId);
             const categoryData = this._categoryDict[validatorDocs.category.toString()];
             if (categoryData)
             {
@@ -49,6 +44,11 @@ export class ValidatorsMetaFacade
 
     get categories() {
         return this._categories;
+    }
+
+    getValidatorDocs(id: ValidatorID) : ValidatorDocs
+    {
+        return builder.get(id);
     }
 }
 
