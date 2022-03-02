@@ -27,3 +27,4 @@ export { EnumDictionary } from './types';
 export { ValidatorID, VALIDATOR_IDs } from './validation/validator-id'
 export { ValidationConfig, ValidatorSetting } from './validation/validation-config'
 export { DEFAULT_VALIDATION_CONFIG } from './validation/default-config'
+export { VALIDATORS_METADATA, ValidatorsMetaFacade, ValidatorCategoryMetaData } from './validation/docs'
