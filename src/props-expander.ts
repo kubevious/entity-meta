@@ -12,6 +12,7 @@ export class PropsExpanderDict
         this.setExpanded(PropsId.sharedWith, true);
         this.setExpanded(PropsId.usedBy, true);
         this.setExpanded(PropsId.config, true);
+        this.setExpanded(PropsId.health, true);
     }
 
     protected setExpanded(key: PropsId, value: boolean)  : void

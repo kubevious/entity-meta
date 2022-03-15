@@ -51,6 +51,8 @@ export class PropsTooltips
         this.set(PropsId.egressCidr, 'Egress network policy rules that allow or deny traffic to CIDR blocks.');
 
         this.set(PropsId.ruleAssistant, 'Controls, tips and snippets to define custom rules for this configuration.');
+
+        this.set(PropsId.health, 'Workload health metrics.');
     }
 
     private set(key: PropsId, value: PropsTooltipValue)

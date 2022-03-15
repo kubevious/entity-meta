@@ -43,6 +43,8 @@ export class PropsTitlesDict
 
         this.setTitle(PropsId.mount, 'Mount Config');
 
+        this.setTitle(PropsId.health, 'Health');
+
         // Summary
         
         this.setTitle(PropsId.appCounters, 'Configuration Summary');
