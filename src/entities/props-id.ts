@@ -45,4 +45,6 @@ export enum PropsId
     markerItems = 'marker-items',
 
     ruleAssistant = 'rule-assistant',
+
+    health = 'health',
 }
