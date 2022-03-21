@@ -60,6 +60,10 @@ export enum NodeKind
     pack = 'pack',
     helm = 'helm',
 
+    rbac = 'rbac',
+    user = 'user',
+    group = 'group',
+
     summary = 'summary',
 
     rule_engine = 'rule_engine',

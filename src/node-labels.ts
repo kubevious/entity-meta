@@ -76,6 +76,12 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.pack, 'Package');
         this.setKind(NodeKind.helm, 'Helm');
 
+        /* RBAC */
+        this.setKind(NodeKind.rbac, 'RBAC');
+        this.setKind(NodeKind.user, 'User');
+        this.setKind(NodeKind.group, 'Group');
+
+        
         /* NON-DIAGRAM :: SUMMARY */
         this.setKind(NodeKind.summary, 'Summary');
 

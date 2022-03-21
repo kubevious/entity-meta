@@ -27,6 +27,7 @@ export class NodeIconsDict extends NodeDict<string | null>
         this._setupImages();
         this._setupGateway();
         this._setupPackage();
+        this._setupRBAC();
     }
 
     private _setupK8s()
@@ -287,6 +288,14 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.pack, this._iconPath('pack/pack.png'));
         this.setKind(NodeKind.helm, this._iconPath('pack/helm.svg'));
     }
+
+    private _setupRBAC()
+    {
+        this.setKind(NodeKind.rbac, this._iconPath('rbac/rbac.png'));
+        this.setKind(NodeKind.user, this._iconPath('rbac/user.svg'));
+        this.setKind(NodeKind.group, this._iconPath('rbac/group.svg'));
+    }
+    
     //
 
     private _setK8sClusteredCore(kind: string, icon: string) : void

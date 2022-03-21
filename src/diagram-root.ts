@@ -111,3 +111,9 @@ addRoot(NodeKind.infra, 'root/infra')
     .subNode(NodeKind.kind)
     .subNode(NodeKind.ns)
     ;
+
+
+addRoot(NodeKind.rbac, 'root/rbac')
+    .subNode(NodeKind.user)
+    .subNode(NodeKind.group)
+    ;
