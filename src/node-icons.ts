@@ -59,7 +59,7 @@ export class NodeIconsDict extends NodeDict<string | null>
         this._setK8sNamespacedCore('LimitRange', 'limits.svg');
         this._setK8sNamespacedCore('ResourceQuota', 'quota.svg');
         this._setK8sNamespacedCore('Endpoints', 'ep.svg');
-        this._setK8sNamespacedCore('Event', 'event.png');
+        this._setK8sNamespacedCore('Event', 'event.svg');
         
         /* K8s :: Namespace :: App */
         this._setK8sNamespacedApi('apps', 'Deployment', 'deploy.svg');
@@ -291,7 +291,7 @@ export class NodeIconsDict extends NodeDict<string | null>
 
     private _setupRBAC()
     {
-        this.setKind(NodeKind.rbac, this._iconPath('rbac/rbac.png'));
+        this.setKind(NodeKind.rbac, this._iconPath('rbac/rbac.svg'));
         this.setKind(NodeKind.user, this._iconPath('rbac/user.svg'));
         this.setKind(NodeKind.group, this._iconPath('rbac/group.svg'));
     }
