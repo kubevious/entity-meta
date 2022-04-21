@@ -7,6 +7,7 @@ import { setupUNSET_SERVICE_ACCOUNT } from './UNSET_SERVICE_ACCOUNT';
 import { setupUNUSED_SERVICE_ACCOUNT } from './UNUSED_SERVICE_ACCOUNT';
 import { setupUNUSED_ROLE_BINDING } from './UNUSED_ROLE_BINDING';
 import { setupUNUSED_ROLE } from './UNUSED_ROLE';
+import { setupMISSING_SVC_ACCOUNT_SECRET } from './MISSING_SVC_ACCOUNT_SECRET';
 
 export function setupRBACValidators(builder: ValidatorsDocsBuilder) {
 
@@ -17,5 +18,6 @@ export function setupRBACValidators(builder: ValidatorsDocsBuilder) {
     setupUNUSED_SERVICE_ACCOUNT(builder);
     setupUNUSED_ROLE_BINDING(builder);
     setupUNUSED_ROLE(builder);
+    setupMISSING_SVC_ACCOUNT_SECRET(builder);
 
 }

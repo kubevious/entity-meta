@@ -1,7 +1,6 @@
 import { ValidatorID as ID } from '../../../validator-id'
 import { ValidatorsDocsBuilder } from '../../builder';
-import { ValidatorCategory, ValidatorSubCategory } from '../../categories';
-import { RESOLUTION_TEXT } from '../texts';
+import { ValidatorCategory } from '../../categories';
 
 export function setupUNUSED_CONFIG_MAP(builder: ValidatorsDocsBuilder) {
 
