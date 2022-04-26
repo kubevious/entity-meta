@@ -47,4 +47,6 @@ export enum PropsId
     ruleAssistant = 'rule-assistant',
 
     health = 'health',
+
+    podsVersionsHealth = 'pods-versions-health',
 }

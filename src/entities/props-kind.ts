@@ -12,5 +12,7 @@ export enum PropsKind
 
     config = 'config',
 
-    ruleAssistant = 'rule-assistant'
+    ruleAssistant = 'rule-assistant',
+
+    podsVersionsHealth = 'pods-versions-health',
 }
