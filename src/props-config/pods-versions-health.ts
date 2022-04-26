@@ -20,8 +20,8 @@ export interface PodHealthInfo
 {
     dn: string;
     date: string;
-    phase: string;
-    runStage: string;
+    phase: PodPhase;
+    runStage?: PodRunStage;
     conditions: PodHealthCondition[];
 }
 
