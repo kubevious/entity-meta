@@ -13,6 +13,7 @@ export class PropsExpanderDict
         this.setExpanded(PropsId.usedBy, true);
         this.setExpanded(PropsId.config, true);
         this.setExpanded(PropsId.health, true);
+        this.setExpanded(PropsId.podStages, true);
         this.setExpanded(PropsId.resourceRoleMatrix, true);
     }
 

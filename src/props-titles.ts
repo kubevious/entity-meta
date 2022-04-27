@@ -44,6 +44,7 @@ export class PropsTitlesDict
         this.setTitle(PropsId.mount, 'Mount Config');
 
         this.setTitle(PropsId.health, 'Health');
+        this.setTitle(PropsId.podStages, 'Pod Stages and Health');
 
         // Summary
         

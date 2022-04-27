@@ -48,5 +48,5 @@ export enum PropsId
 
     health = 'health',
 
-    podsVersionsHealth = 'pods-versions-health',
+    podStages = 'pod-stages',
 }

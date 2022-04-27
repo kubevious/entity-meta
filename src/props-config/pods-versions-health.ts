@@ -12,7 +12,6 @@ export interface PodVersionHealthInfo
 export interface PodHealthLauncherInfo
 {
     dn: string,
-    title: string,
     date: string
 }
 

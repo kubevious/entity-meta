@@ -16,6 +16,7 @@ export class PropsOrderDict
         this.setTitle(PropsId.properties, 40);
 
         this.setTitle(PropsId.health, 45);
+        this.setTitle(PropsId.podStages, 46);
 
         this.setTitle(PropsId.labels, 50);
         this.setTitle(PropsId.annotations, 60);

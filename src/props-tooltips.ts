@@ -53,6 +53,7 @@ export class PropsTooltips
         this.set(PropsId.ruleAssistant, 'Controls, tips and snippets to define custom rules for this configuration.');
 
         this.set(PropsId.health, 'Workload health metrics.');
+        this.set(PropsId.podStages, 'Track health of pods across different versions.');
     }
 
     private set(key: PropsId, value: PropsTooltipValue)

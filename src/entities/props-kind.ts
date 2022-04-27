@@ -14,5 +14,6 @@ export enum PropsKind
 
     ruleAssistant = 'rule-assistant',
 
+    healthTable = 'health-table',
     podsVersionsHealth = 'pods-versions-health',
 }
