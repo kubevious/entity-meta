@@ -43,7 +43,7 @@ export enum PodPhase {
 export enum PodRunStage {
     Scheduling = "Scheduling",
     Initializing = "Initializing",
-    WaitingContainers = "WaitingContainers",
+    WaitingContainersReady = "WaitingContainersReady",
     WaitingConditions = "WaitingConditions",
     WaitingReady = "WaitingReady",
     Ready = "Ready"
