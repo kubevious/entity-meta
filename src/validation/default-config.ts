@@ -17,7 +17,6 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
     [ID.MISSING_SVC_ACCOUNT_SECRET]: ValidatorSetting.error,
     [ID.MISSING_PVC]: ValidatorSetting.error,
     [ID.MISSING_PV]: ValidatorSetting.error,
-    // [ID.MISSING]: ValidatorSetting.error,
     [ID.MISSING_HPA_APP]: ValidatorSetting.error,
     [ID.MISSING_SERVICE_APP]: ValidatorSetting.error,
     [ID.MISSING_INGRESS_SERVICE]: ValidatorSetting.error,
@@ -43,6 +42,7 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
     [ID.UNUSED_PVC]: ValidatorSetting.warn,
     [ID.UNUSED_PV]: ValidatorSetting.warn,
 
+    [ID.POD_LIFECYCLE]: ValidatorSetting.error,
     [ID.POD_STATUS_NOT_SCHEDULED]: ValidatorSetting.error,
     [ID.POD_STATUS_NOT_CONTAINERS_READY]: ValidatorSetting.error,
     [ID.POD_STATUS_NOT_INITIALIZED]: ValidatorSetting.error,

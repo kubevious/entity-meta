@@ -3,6 +3,7 @@ import { ValidatorsDocsBuilder } from '../../builder';
 import { setupUNOWNED_REPLICA_SET } from './UNOWNED_REPLICA_SET'
 import { setupUNOWNED_POD } from './UNOWNED_POD'
 import { setupMISSING_HPA_APP } from './MISSING_HPA_APP'
+import { setupPOD_LIFECYCLE } from './POD_LIFECYCLE'
 import { setupPOD_STATUS_NOT_SCHEDULED } from './POD_STATUS_NOT_SCHEDULED'
 import { setupPOD_STATUS_NOT_CONTAINERS_READY } from './POD_STATUS_NOT_CONTAINERS_READY'
 import { setupPOD_STATUS_NOT_INITIALIZED } from './POD_STATUS_NOT_INITIALIZED'
@@ -16,6 +17,7 @@ export function setupComputeValidators(builder: ValidatorsDocsBuilder) {
     
     setupMISSING_HPA_APP(builder);
 
+    setupPOD_LIFECYCLE(builder);
     setupPOD_STATUS_NOT_SCHEDULED(builder);
     setupPOD_STATUS_NOT_CONTAINERS_READY(builder);
     setupPOD_STATUS_NOT_INITIALIZED(builder);
