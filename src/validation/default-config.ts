@@ -20,6 +20,7 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
     [ID.MISSING_HPA_APP]: ValidatorSetting.error,
     [ID.MISSING_SERVICE_APP]: ValidatorSetting.error,
     [ID.MISSING_INGRESS_SERVICE]: ValidatorSetting.error,
+    [ID.MISSING_INGRESS_SERVICE_PORT]: ValidatorSetting.error,
 
     [ID.EMPTY_ENV_CONFIG_MAP]: ValidatorSetting.off,
     [ID.EMPTY_ENV_SECRET]: ValidatorSetting.off,
