@@ -70,4 +70,10 @@ export enum NodeKind
     rule = 'rule',
     rule_items = 'rule_items',
     rule_logs = 'rule_logs',
+
+
+    /* Traefik */
+    traefik_ingress_route = 'traefik_ingress_route',
+    traefik_service = 'traefik_service',
+    traefik_middleware = 'traefik_middleware',
 }

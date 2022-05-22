@@ -28,6 +28,8 @@ export class NodeIconsDict extends NodeDict<string | null>
         this._setupGateway();
         this._setupPackage();
         this._setupRBAC();
+
+        this._setup3rdParty();
     }
 
     private _setupK8s()
@@ -296,6 +298,18 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.group, this._iconPath('rbac/group.svg'));
     }
     
+    private _setup3rdParty()
+    {
+        this._setupTraefik()
+    }
+
+    private _setupTraefik()
+    {
+        this.setKind(NodeKind.traefik_ingress_route, this._iconPath('3rdparty/traefik/traefik.svg'));
+        this.setKind(NodeKind.traefik_middleware, this._iconPath('3rdparty/traefik/traefik.svg'));
+        this.setKind(NodeKind.traefik_service, this._iconPath('3rdparty/traefik/traefik.svg'));
+    }
+
     //
 
     private _setK8sClusteredCore(kind: string, icon: string) : void

@@ -81,6 +81,14 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.user, 'User');
         this.setKind(NodeKind.group, 'Group');
 
+
+        /**** 3rd PARTY ****/
+
+        /* Traefik */
+        this.setKind(NodeKind.traefik_ingress_route, 'Traefik Ingress Route');
+        this.setKind(NodeKind.traefik_middleware, 'Traefik Middleware');
+        this.setKind(NodeKind.traefik_service, 'Traefik Service');
+ 
         
         /* NON-DIAGRAM :: SUMMARY */
         this.setKind(NodeKind.summary, 'Summary');

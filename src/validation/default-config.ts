@@ -12,8 +12,10 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
     [ID.MISSING_PSP]: ValidatorSetting.error,
     [ID.MISSING_VOLUME_MOUNT_CONFIG_MAP]: ValidatorSetting.error,
     [ID.MISSING_ENV_CONFIG_MAP]: ValidatorSetting.error,
+    [ID.MISSING_ENV_CONFIG_MAP_KEY]: ValidatorSetting.error,
     [ID.MISSING_VOLUME_MOUNT_SECRET]: ValidatorSetting.error,
     [ID.MISSING_ENV_SECRET]: ValidatorSetting.error,
+    [ID.MISSING_ENV_SECRET_KEY]: ValidatorSetting.error,
     [ID.MISSING_SVC_ACCOUNT_SECRET]: ValidatorSetting.error,
     [ID.MISSING_PVC]: ValidatorSetting.error,
     [ID.MISSING_PV]: ValidatorSetting.error,
@@ -49,4 +51,10 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
     [ID.POD_STATUS_NOT_INITIALIZED]: ValidatorSetting.error,
     [ID.POD_STATUS_NOT_READY]: ValidatorSetting.error,
     [ID.POD_STATUS_OTHER_CONDITION]: ValidatorSetting.error,
+
+    [ID.TRAEFIK_MISSING_MIDDLEWARE]: ValidatorSetting.error,
+    [ID.TRAEFIK_MISSING_SERVICE]: ValidatorSetting.error,
+    [ID.TRAEFIK_UNUSED_MIDDLEWARE]: ValidatorSetting.warn,
+    [ID.TRAEFIK_UNUSED_SERVICE]: ValidatorSetting.warn,
+
 }
