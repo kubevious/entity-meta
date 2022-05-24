@@ -8,6 +8,7 @@ import { setupStorageValidators } from './storage';
 import { setupRBACValidators } from './rbac';
 import { setupSecurityValidators } from './security';
 import { setupApiValidators } from './api';
+import { setup3rdParty } from './3rd-party';
 
 export const builder = new ValidatorsDocsBuilder();
 
@@ -19,3 +20,4 @@ setupStorageValidators(builder);
 setupRBACValidators(builder);
 setupSecurityValidators(builder);
 setupApiValidators(builder);
+setup3rdParty(builder);

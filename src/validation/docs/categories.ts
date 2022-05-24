@@ -8,7 +8,8 @@ export enum ValidatorCategory
     Compute = 'Compute',
     Networking = 'Networking',
     Configuration = 'Configuration',
-    Misc = 'Misc'
+    Misc = 'Misc',
+    Traefik = 'Traefik'
 }
 
 export enum ValidatorSubCategory
@@ -65,5 +66,9 @@ export const VALIDATOR_CATEGORIES : ValidatorCategoryInfo[] = [
     {
         id: ValidatorCategory.Misc,
         name: 'Miscellaneous'
+    },
+    {
+        id: ValidatorCategory.Traefik,
+        name: 'Traefik Proxy'
     },
 ]

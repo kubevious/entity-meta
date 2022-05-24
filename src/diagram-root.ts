@@ -81,6 +81,10 @@ addRoot(NodeKind.gateway, 'root/gateway')
     .subNode(NodeKind.service)
     .subNode(NodeKind.port)
     .subNode(NodeKind.app)
+    .subNode(NodeKind.traefik_ingress_route)
+    .subNode(NodeKind.traefik_service)
+    .subNode(NodeKind.traefik_middleware)
+    .subNode(NodeKind.traefik_tls_opts)
     ;
 
 addRoot(NodeKind.pack, 'root/pack')

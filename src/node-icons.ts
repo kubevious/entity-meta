@@ -8,6 +8,8 @@ type ApiIconDict = { [api: string] : KindIconDict};
 
 export class NodeIconsDict extends NodeDict<string | null>
 {
+    private _apiServiceDict : KindIconDict = {};
+
     private _k8sClusteredCoreDict : KindIconDict = {};
     private _k8sClusteredApiDict : ApiIconDict = {};
     private _k8sNamespacedCoreDict : KindIconDict = {};
@@ -35,7 +37,7 @@ export class NodeIconsDict extends NodeDict<string | null>
     private _setupK8s()
     {
         this.setKind(NodeKind.cluster, this._iconPath('api-cluster.svg'));
-        this.setKind(NodeKind.api, this._k8sIconPath('api.svg'));
+        this.setKind(NodeKind.api, this._handleApi.bind(this));
         this.setKind(NodeKind.version, this._iconPath('api-version.svg'));
 
         /*** INITIAL SETUP ***/
@@ -122,6 +124,19 @@ export class NodeIconsDict extends NodeDict<string | null>
         // - group.svg
         // - sc.svg
         // - user.svg
+    }
+
+    private _handleApi(dnParts : Dn)
+    {
+        const api = _.last(dnParts)!;
+        if (api.name) {
+            const icon = this._apiServiceDict[api.name];
+            if (icon) {
+                return icon;
+            }
+        }
+
+        return this._k8sIconPath('api.svg');
     }
 
     private _handleK8sClusteredCore(dnParts: Dn)
@@ -305,9 +320,34 @@ export class NodeIconsDict extends NodeDict<string | null>
 
     private _setupTraefik()
     {
-        this.setKind(NodeKind.traefik_ingress_route, this._iconPath('3rdparty/traefik/traefik.svg'));
-        this.setKind(NodeKind.traefik_middleware, this._iconPath('3rdparty/traefik/traefik.svg'));
-        this.setKind(NodeKind.traefik_service, this._iconPath('3rdparty/traefik/traefik.svg'));
+        {
+            const icon = this._iconPath('3rdparty/traefik/traefik.svg');
+            this._apiServiceDict['traefik.containo.us'] = icon;
+        }
+
+        {
+            const icon = this._iconPath('3rdparty/traefik/traefik-ingress-route.svg');
+            this._setNamespacedApi('traefik.containo.us', 'IngressRoute', icon);
+            this.setKind(NodeKind.traefik_ingress_route, icon);
+        }
+
+        {
+            const icon = this._iconPath('3rdparty/traefik/traefik-service.svg');
+            this._setNamespacedApi('traefik.containo.us', 'TraefikService', icon);
+            this.setKind(NodeKind.traefik_service, icon);
+        }
+
+        {
+            const icon = this._iconPath('3rdparty/traefik/traefik-middleware.svg')
+            this._setNamespacedApi('traefik.containo.us', 'Middleware', icon);
+            this.setKind(NodeKind.traefik_middleware, icon);
+        }
+
+        {
+            const icon = this._iconPath('3rdparty/traefik/traefik-tls-options.svg')
+            this._setNamespacedApi('traefik.containo.us', 'TLSOption', icon);
+            this.setKind(NodeKind.traefik_tls_opts, icon);
+        }
     }
 
     //
@@ -332,20 +372,25 @@ export class NodeIconsDict extends NodeDict<string | null>
 
     private _setK8sNamespacedApi(api: string, kind: string, icon: string) : void
     {
+        this._setNamespacedApi(api, kind, this._k8sIconPath(icon));
+    }
+
+    private _setNamespacedApi(api: string, kind: string, iconPath: string) : void
+    {
         if (!this._k8sNamespacedApiDict[api]) {
             this._k8sNamespacedApiDict[api] = {}
         }
-        this._k8sNamespacedApiDict[api][kind] = this._k8sIconPath(icon);
-    }
-
-    private _iconPath(x: string)
-    {
-        return `/img/entities/${x}`;
+        this._k8sNamespacedApiDict[api][kind] = iconPath;
     }
 
     private _k8sIconPath(x: string)
     {
         return this._iconPath(`k8s/${x}`);
+    }
+
+    private _iconPath(x: string)
+    {
+        return `/img/entities/${x}`;
     }
 
     protected _getDefaultValue(dn?: Dn)

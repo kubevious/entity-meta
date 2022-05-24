@@ -88,6 +88,7 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.traefik_ingress_route, 'Traefik Ingress Route');
         this.setKind(NodeKind.traefik_middleware, 'Traefik Middleware');
         this.setKind(NodeKind.traefik_service, 'Traefik Service');
+        this.setKind(NodeKind.traefik_tls_opts, 'Traefik TLS Options');
  
         
         /* NON-DIAGRAM :: SUMMARY */

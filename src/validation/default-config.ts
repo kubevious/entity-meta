@@ -54,7 +54,9 @@ export const DEFAULT_VALIDATION_CONFIG : ValidationConfig = {
 
     [ID.TRAEFIK_MISSING_MIDDLEWARE]: ValidatorSetting.error,
     [ID.TRAEFIK_MISSING_SERVICE]: ValidatorSetting.error,
+    [ID.TRAEFIK_MISSING_TLS_OPTIONS]: ValidatorSetting.error,
     [ID.TRAEFIK_UNUSED_MIDDLEWARE]: ValidatorSetting.warn,
     [ID.TRAEFIK_UNUSED_SERVICE]: ValidatorSetting.warn,
+    [ID.TRAEFIK_UNUSED_TLS_OPTIONS]: ValidatorSetting.warn,
 
 }

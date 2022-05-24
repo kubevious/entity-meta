@@ -76,4 +76,5 @@ export enum NodeKind
     traefik_ingress_route = 'traefik_ingress_route',
     traefik_service = 'traefik_service',
     traefik_middleware = 'traefik_middleware',
+    traefik_tls_opts = 'traefik_tls_opts',
 }
