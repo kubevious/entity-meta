@@ -8,7 +8,7 @@ export function setupMISSING_ENV_SECRET_KEY(builder: ValidatorsDocsBuilder) {
     .validator(ID.MISSING_ENV_SECRET_KEY)
     .category(ValidatorCategory.Container)
     .subCategory(ValidatorSubCategory.EnvironmentVariables)
-    .title('Unresolved Secret reference in container environment variables')
+    .title('Unresolved Secret Key reference in container environment variables')
     .description(
 `You can use Secrets as values for container environment variables.
 This validator detects a condition when a Secret data key used as a source for 
