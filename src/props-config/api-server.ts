@@ -6,6 +6,8 @@ export interface K8sApiResourceStatus
     kindName: string;
 
     isNamespaced: boolean;
+
+    verbs: string[];
     
     isDisabled?: boolean;
     isSkipped?: boolean;
