@@ -30,4 +30,5 @@ export { DEFAULT_VALIDATION_CONFIG } from './validation/default-config'
 export { VALIDATORS_METADATA, ValidatorsMetaFacade, ValidatorCategoryMetaData } from './validation/docs'
 export { ValidatorDocs } from './validation/docs/builder';
 
-export { K8sApiResourceStatus, K8sApiResourceError } from './props-config/api-server';
+export { K8sApiResourceStatusConfig, K8sApiResourceStatus, K8sApiResourceError } from './props-config/api-server';
+export { K8sApiResourceStatusLoader } from './k8s/k8s-api-resource-status-loader';

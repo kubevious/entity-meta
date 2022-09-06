@@ -1,3 +1,10 @@
+export interface K8sApiResourceStatusConfig
+{
+    config: {
+        resources: K8sApiResourceStatus[]
+    }
+}
+
 export interface K8sApiResourceStatus
 {
     apiVersion: string;
