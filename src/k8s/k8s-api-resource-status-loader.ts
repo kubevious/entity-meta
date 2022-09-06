@@ -4,8 +4,10 @@ export class K8sApiResourceStatusLoader
 {
     private _apiDict : { [apiVersion: string] : { [kind: string] : K8sApiResourceStatus }} = {};
     
-    constructor(config: K8sApiResourceStatusConfig)
+    load(config: K8sApiResourceStatusConfig)
     {
+        this._apiDict = {};
+
         if (!config) {
             throw new Error("[K8sApiResourceStatusLoader] Missing ApiResourceStatus");
             return;
