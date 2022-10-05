@@ -274,6 +274,8 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.replicaset, this._k8sIconPath('rs.svg'));
         this.setKind(NodeKind.pod, this._k8sIconPath('pod.svg'));
 
+        this.setKind(NodeKind.podtmpl, this._iconPath('logic/podtempl.png'));
+
         this.setKind(NodeKind.launcher,
             (dnParts) => {
                 const kind = _.last(dnParts)!.name!;

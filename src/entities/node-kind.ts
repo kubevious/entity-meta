@@ -47,6 +47,8 @@ export enum NodeKind
     cronjob = 'cronjob',
     pod = 'pod',
 
+    podtmpl = 'podtmpl',
+
     infra = 'infra',
     nodes = 'nodes',
     pool = 'pool',

@@ -55,8 +55,11 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.pod, 'Pod');
         this.setKind(NodeKind.depl, 'Deployment');
         this.setKind(NodeKind.ss, 'Stateful Set');
+        this.setKind(NodeKind.ds, 'Daemon Set');
         this.setKind(NodeKind.replicaset, 'Replica Set');
         this.setKind(NodeKind.rc, 'Replication Controller');
+
+        this.setKind(NodeKind.podtmpl, 'Pod Template');
 
         /* INFRA */
         this.setKind(NodeKind.infra, 'Infra');
