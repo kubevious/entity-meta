@@ -16,7 +16,16 @@ export class DiagramOrderDict
         this.setOrder(NodeKind.initcont, 100);
         this.setOrder(NodeKind.cont, 110);
 
+        this.setOrder(NodeKind.podtmpl, 150);
+
         this.setOrder(NodeKind.launcher, 200);
+        this.setOrder(NodeKind.depl, 200);
+        this.setOrder(NodeKind.ss, 200);
+        this.setOrder(NodeKind.ds, 200);
+        this.setOrder(NodeKind.replicaset, 200);
+        this.setOrder(NodeKind.rc, 200);
+        this.setOrder(NodeKind.job, 200);
+        this.setOrder(NodeKind.cronjob, 200);
         
         this.setOrder(NodeKind.vols, 230);
 
