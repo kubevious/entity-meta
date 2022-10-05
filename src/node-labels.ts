@@ -33,7 +33,6 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.mount, 'Mount');
         this.setKind(NodeKind.secret, 'Secret');
         this.setKind(NodeKind.configmap, 'Config Map');
-        this.setKind(NodeKind.replicaset, 'Replica Set');
         this.setKind(NodeKind.hpa, 'Horizontal Pod AutoScaler');
         this.setKind(NodeKind.svcaccnt, 'Service Account');
         this.setKind(NodeKind.rlbndg, 'Role Binding');
@@ -46,13 +45,18 @@ export class DiagramLabelsDict
         this.setKind(NodeKind.netpols, 'Network Policies');
         this.setKind(NodeKind.netpol, 'Network Policy');
         this.setKind(NodeKind.service, 'Service');
-        this.setKind(NodeKind.pod, 'Pod');
         this.setKind(NodeKind.ingress, 'Ingress');
-        this.setKind(NodeKind.launcher, 'Launcher');
         this.setKind(NodeKind.image, 'Image');
         this.setKind(NodeKind.port, 'Port');
+
+        this.setKind(NodeKind.launcher, 'Launcher');
         this.setKind(NodeKind.job, 'Job');
-        this.setKind(NodeKind.cronjob, 'CronJob');
+        this.setKind(NodeKind.cronjob, 'Cron Job');
+        this.setKind(NodeKind.pod, 'Pod');
+        this.setKind(NodeKind.depl, 'Deployment');
+        this.setKind(NodeKind.ss, 'Stateful Set');
+        this.setKind(NodeKind.replicaset, 'Replica Set');
+        this.setKind(NodeKind.rc, 'Replication Controller');
 
         /* INFRA */
         this.setKind(NodeKind.infra, 'Infra');

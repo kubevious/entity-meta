@@ -252,7 +252,6 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.ns, this._k8sIconPath('ns.svg'));
         this.setKind(NodeKind.secret, this._k8sIconPath('secret.svg'));
         this.setKind(NodeKind.configmap, this._k8sIconPath('cm.svg'));
-        this.setKind(NodeKind.replicaset, this._k8sIconPath('rs.svg'));
         this.setKind(NodeKind.hpa, this._k8sIconPath('hpa.svg'));
         this.setKind(NodeKind.svcaccnt, this._k8sIconPath('sa.svg'));
         this.setKind(NodeKind.rlbndg, this._k8sIconPath('rb.svg'));
@@ -266,9 +265,14 @@ export class NodeIconsDict extends NodeDict<string | null>
         this.setKind(NodeKind.netpol, this._k8sIconPath('netpol.svg'));
         this.setKind(NodeKind.service, this._k8sIconPath('svc.svg'));
         this.setKind(NodeKind.ingress, this._k8sIconPath('ing.svg'));
-        this.setKind(NodeKind.pod, this._k8sIconPath('pod.svg'));
+
         this.setKind(NodeKind.job, this._k8sIconPath('job.svg'));
         this.setKind(NodeKind.cronjob, this._k8sIconPath('cronjob.svg'));
+        this.setKind(NodeKind.depl, this._k8sIconPath('deploy.svg'));
+        this.setKind(NodeKind.ds, this._k8sIconPath('ds.svg'));
+        this.setKind(NodeKind.ss, this._k8sIconPath('sts.svg'));
+        this.setKind(NodeKind.replicaset, this._k8sIconPath('rs.svg'));
+        this.setKind(NodeKind.pod, this._k8sIconPath('pod.svg'));
 
         this.setKind(NodeKind.launcher,
             (dnParts) => {
