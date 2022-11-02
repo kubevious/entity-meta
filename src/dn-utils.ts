@@ -2,9 +2,8 @@ import _ from 'the-lodash';
 import { NodeKind } from './entities/node-kind';
 
 export interface RnInfo {
-    rn: string,
     kind: NodeKind,
-    name: string | null
+    name?: string | null
 }
 
 export type Dn = RnInfo[];
@@ -61,19 +60,17 @@ export function parseRn(rn: string) : RnInfo
     const index = rn.indexOf('-');
     if (index == -1) {
         return {
-            rn: rn,
-            kind: getKind(rn),
+            kind: parseKind(rn),
             name: null
         };
     }
     return {
-        rn: rn,
-        kind: getKind(rn.substr(0, index)),
+        kind: parseKind(rn.substr(0, index)),
         name: rn.substr(index + 2, rn.length - (index + 3))
     };
 }
 
-export function getKind(kind: string) : NodeKind
+function parseKind(kind: string) : NodeKind
 {
     return <NodeKind>kind;
 }
@@ -90,15 +87,23 @@ export function parentDn(dn : string) : string
     return makeDnFromParts(_.dropRight(parts));
 }
 
-export function makeDn(parentDn: string, childRn: string) : string
+function makeRn(infoOrKind : RnInfo | string) : string
 {
-    if (!parentDn) {
-        return childRn;
+    if (_.isString(infoOrKind)) {
+        return infoOrKind;
     }
-    return parentDn + "/" + childRn;
+    if (infoOrKind.name) {
+        return `${infoOrKind.kind}-[${infoOrKind.name}]`
+    }
+    return infoOrKind.kind;
 }
 
-export function makeDnFromParts(parts: string[]) : string
+export function makeDn(parts: RnInfo[]) : string
+{
+    return makeDnFromParts(parts.map(x => makeRn(x)));
+}
+
+function makeDnFromParts(parts: string[]) : string
 {
     return parts.join('/');
 }
