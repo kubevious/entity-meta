@@ -107,3 +107,23 @@ function makeDnFromParts(parts: string[]) : string
 {
     return parts.join('/');
 }
+
+export function sanitizeDnPath(dn: string): string
+{
+    const parts = splitDn(dn);
+    const sanitizedParts = parts.map(x => sanitizeString(x));
+    return sanitizedParts.join('/');
+}
+
+function sanitizeString(str: string) : string
+{
+    const SYMBOLS = [
+        /\//g , /\\/g, /#/g, /%/g, /&/g, /\*/g, /'/g, /"/g
+        , /{/g, /}/g, /</g, />'/g, /@/g
+        , /:/g, /\+/g, /\|/g, /=/g, /\?/g, /!/g];
+    for(const ch of SYMBOLS)
+    {
+        str = str.replace(ch, '_');
+    }
+    return str;
+}
